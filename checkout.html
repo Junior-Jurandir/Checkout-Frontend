@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF=8">
+    <!-- Título da janela -->
+    <title>Checkout RCHLO</title>
+</head>
+    <div class="header">
+    <!-- Título da página (em destaque) -->
+    <h1>Ótima escolha!</h1>
+    <!-- Texto logo abaixo do título da página -->
+    <p>Obrigado por comprar na RCHLO! Preencha seus dados para efetivar a compra.</p>
+    </div>
+<div class="subtitulo">
+    <!-- Subtítulo, referente ao trecho sobre os dados do produto -->
+    <h2>Sua compra</h2>
+</div>
+<!-- início dos dados do produto -->
+<div class="produto">
+<!-- imagem do produto -->
+    <img src="https://static.riachuelo.com.br/RCHLO/14247984003/portrait/279d0565feb361cff852a6a792ffdb5c89890ba3.jpg" alt="Camiseta" width="100px">
+
+    <!-- nome do produto -->
+    <p>Produto:<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Camiseta Manga Curta Malha Tie Dye The Simpsons Branco Riachuelo</p>
+
+    <!-- cor do produto -->
+    <p>Cor:<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Branco</p>
+
+    <!-- tamanho do produto -->
+    <p>Tamanho:<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;G</p>
+
+    <!-- preço do produto -->
+    <p>Preço:<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R$ 69,90</p>
+    <!-- fim dos dados do produto -->
+</div>
+<!-- início do formulário -->
+    <form action="cliente.php" method="post"></form>
+    <!-- Título da seção de dados pessoais do formulário-->
+    <fieldset>
+        <legend>Dados Pessoais</legend>
+        Nome completo: <input type="text" name="nome" size="30"><!-- colocar campo de texto aqui --><br/>
+        Email: <input type="email" name="email" size="30"><!-- colocar campo de email aqui --><br/>
+        CPF:  <input type="text" name="cpf" size="30"><!-- colocar campo de texto aqui --><br/>
+         <!-- colocar checkbox aqui --><input type="checkbox"> Quero receber a newsletter da RCHLO!
+    </fieldset>
+    
+    <!-- Título da seção de cartão de crédito do formulário-->
+    <fieldset>
+        <legend>Cartão de crédito</legend>
+        Número - CVV: <input type="text" name="cartao" size="30"><!-- colocar campo de texto aqui --><br/>
+        Bandeira: <select name="Bandeira">
+            <option>Selecione uma opção</option>
+            <option>MasterCard</option>
+            <option>VISA</option>
+            <option>American Express</option>
+        </select><!-- colocar campo de seleção com as opções MasterCard, VISA e American Express --><br/>
+        Validade: <!-- colocar campo referente ao mês aqui --><input type="month">
+    </fieldset>
+    
+    <!-- botão de submissão do formulário com o label a seguir --><input type="submit" name="btn.Confirmar" value="Confirmar Pedido"> 
+    </form>
+<!-- fim do formulário -->
+</html>
