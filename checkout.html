@@ -5,6 +5,22 @@
     <!-- Título da janela -->
     <title>Checkout RCHLO</title>
     <link rel="stylesheet" href="./style.css">
+    <script>
+        function mascara(i){
+
+            var v = i.value;
+            
+            if(isNaN(v[v.length-1])){ // impede entrar outro caractere que não seja número
+                i.value = v.substring(0, v.length-1);
+                return;
+            }
+            
+            i.setAttribute("maxlength", "14");
+            if (v.length == 3 || v.length == 7) i.value += ".";
+            if (v.length == 11) i.value += "-";
+
+            }
+    </script>
 </head>
 <body>
     <div class="header">
@@ -12,22 +28,6 @@
             <h1>Ótima escolha!</h1>
             <!-- Texto logo abaixo do título da página -->
             <h3>Obrigado por comprar na RCHLO! Preencha seus dados para efetivar a compra.</h3>
-            <script>
-                function mascara(i){
-   
-                    var v = i.value;
-                    
-                    if(isNaN(v[v.length-1])){ // impede entrar outro caractere que não seja número
-                        i.value = v.substring(0, v.length-1);
-                        return;
-                    }
-                    
-                    i.setAttribute("maxlength", "14");
-                    if (v.length == 3 || v.length == 7) i.value += ".";
-                    if (v.length == 11) i.value += "-";
-
-                    }
-            </script>
         </div>
     <div class="main">
         <div class="main2">
