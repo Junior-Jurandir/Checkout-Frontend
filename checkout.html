@@ -12,6 +12,22 @@
             <h1>Ótima escolha!</h1>
             <!-- Texto logo abaixo do título da página -->
             <h3>Obrigado por comprar na RCHLO! Preencha seus dados para efetivar a compra.</h3>
+            <script>
+                function mascara(i){
+   
+                    var v = i.value;
+                    
+                    if(isNaN(v[v.length-1])){ // impede entrar outro caractere que não seja número
+                        i.value = v.substring(0, v.length-1);
+                        return;
+                    }
+                    
+                    i.setAttribute("maxlength", "14");
+                    if (v.length == 3 || v.length == 7) i.value += ".";
+                    if (v.length == 11) i.value += "-";
+
+                    }
+            </script>
         </div>
     <div class="main">
         <div class="main2">
@@ -49,9 +65,10 @@
             <fieldset>
                 <h2>Dados Pessoais</h2>
                 <p>
-                    Nome completo: <br/><input type="text" name="nome"><!-- colocar campo de texto aqui --><br/>
-                    Email: <br/><input type="email" name="email" placeholder="email@exemplo.com"><!-- colocar campo de email aqui --><br/>
-                    CPF:  <br/><input type="text" name="cpf" placeholder="000.000.000-00" autocomplete="off"><!-- colocar campo de texto aqui --><br/>
+                    Nome completo: <br/><input type="text" name="nome" required maxlength="200"><!-- colocar campo de texto aqui --><br/>
+                    Email: <br/><input type="email" name="email" placeholder="email@exemplo.com" required maxlength="300"><!-- colocar campo de email aqui --><br/>
+                    CPF:  <br/><input oninput="mascara(this)" type="text" id="cpf" placeholder="000.000.000-00" autocomplete="off" required maxlength="14">
+                    <!-- colocar campo de texto aqui --><br/>
                     <input type="checkbox"> Quero receber a newsletter da RCHLO!<!-- colocar checkbox aqui -->
                 </p>
             </fieldset>
@@ -59,15 +76,15 @@
             <!-- Título da seção de cartão de crédito do formulário-->
            <fieldset>
                 <h2>Cartão de crédito</h2>
-                <p>Número - CVV: <br/><input type="text" name="cartao"><!-- colocar campo de texto aqui --><br/>
+                <p>Número - CVV: <br/><input type="number" name="cartao" required maxlength="3"><!-- colocar campo de texto aqui --><br/>
                     Bandeira: <br/>
-                    <select name="Bandeira">
+                    <select name="Bandeira" required>
                         <option>Selecione uma opção</option>
                         <option>MasterCard</option>
                         <option>VISA</option>
                         <option>American Express</option>
                     </select><!-- colocar campo de seleção com as opções MasterCard, VISA e American Express --><br/>
-                    Validade: <br/><input type="month"><!-- colocar campo referente ao mês aqui -->
+                    Validade: <br/><input type="month"required><!-- colocar campo referente ao mês aqui -->
                 </p>
             </fieldset>
             <!-- botão de submissão do formulário com o label a seguir --><input type="submit" name="btn.Confirmar" value="Confirmar Pedido"> 

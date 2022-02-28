@@ -5,7 +5,7 @@
     text-align: justify;
 
 }
-input[type="text"], input[type="email"], input[type="month"], select{
+input[type="text"], input[type="email"], input[type="month"], input[type="number"], select{
     border: 1px solid black;
     border-radius: 3px;
     width: 100%;
@@ -16,7 +16,7 @@ input[type="submit"]{
     border: 1px solid black;
     border-radius: 5px;
     text-align: center;
-    width: 150 px;
+    width: 160 px;
     height: 50px;
     color: white;
     background-color: blue;
